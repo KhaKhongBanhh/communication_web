@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Câu Nói Hay</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Chặn người chưa đăng nhập ngay từ đầu, tránh nháy nội dung -->
+  <script>
+    if (sessionStorage.getItem("authed") !== "true") location.replace("index.html");
+  </script>
+</head>
+<body>
+  <header class="topbar">
+    <h1>💬 Câu Nói Hay</h1>
+    <input type="search" id="search" placeholder="🔍 Tìm theo nội dung hoặc tác giả..." />
+    <button id="logout-btn" class="btn-secondary">Đăng xuất</button>
+  </header>
+
+  <main class="container">
+    <!-- Form thêm câu nói -->
+    <form id="add-form" class="add-form">
+      <textarea id="content" placeholder="Nhập câu nói hay..." maxlength="500" required></textarea>
+      <input type="text" id="author" placeholder="Tác giả (để trống = Khuyết danh)" maxlength="100" />
+      <button type="submit" id="add-btn">➕ Thêm câu nói</button>
+    </form>
+
+    <p id="count" class="count">Đang tải...</p>
+    <ul id="quote-list" class="quote-list"></ul>
+  </main>
+
+  <script type="module" src="js/home.js"></script>
+</body>
+</html>

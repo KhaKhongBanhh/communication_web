@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Đăng nhập - Câu nói hay</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="login-page">
+  <form id="login-form" class="login-box">
+    <h1>🔒 Câu Nói Hay</h1>
+    <p>Vui lòng nhập mật khẩu để tiếp tục</p>
+    <input type="password" id="password" placeholder="Nhập mật khẩu..." autocomplete="off" required />
+    <button type="submit" id="login-btn">Vào trang</button>
+    <p id="error" class="error"></p>
+  </form>
+
+  <!-- type="module" là BẮT BUỘC để dùng import -->
+  <script type="module" src="js/login.js"></script>
+</body>
+</html>

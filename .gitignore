@@ -1,0 +1,7 @@
+*.json.key 
+*adminsdk
+*.json 
+.env 
+.firebase/ 
+firebase-debug.log 
+node_modules/
